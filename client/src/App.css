@@ -1,6 +1,9 @@
 input:focus {
   outline: none;
 }
+textarea:focus {
+  outline: none;
+}
 .container {
   width: 100%;
   max-width: 1200px;
@@ -31,6 +34,8 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  border-left: none;
+  border-right: none;
 }
 
 tr:nth-child(even) {

@@ -29,7 +29,7 @@ const AddExperience = props => {
       .max(70, "Too Long!"),
     description: Yup.string()
       .min(5, "Too Short!")
-      .max(70, "Too Long!")
+      .max(300, "Too Long!")
   });
 
   const initialValues = {

@@ -7,6 +7,7 @@ import { createProfile } from "../../services/endpoints/profiles";
 import { ProfilesContext } from "../../context/ProfilesProvider";
 
 const CreateProfile = props => {
+  const [createProfileError, setCreateProfileError] = React.useState("");
   const { state, dispatch } = useContext(ProfilesContext);
 
   const handleSubmit = async values => {
@@ -24,6 +25,7 @@ const CreateProfile = props => {
       }
     } else {
       console.log(error.response.data);
+      setCreateProfileError(error.response.data.handle);
     }
   };
 
@@ -42,7 +44,7 @@ const CreateProfile = props => {
       .max(70, "Too Long!"),
     bio: Yup.string()
       .min(2, "Too Short!")
-      .max(70, "Too Long!"),
+      .max(300, "Too Long!"),
     status: Yup.string()
       .min(2, "Too Short!")
       .max(70, "Too Long!")
@@ -107,6 +109,7 @@ const CreateProfile = props => {
           ? ""
           : "Let's get some information to make your profile stand out"}
       </h3>
+      <p className="text-center text text-red-500">{createProfileError}</p>
       <Formik
         initialValues={initialValues}
         validationSchema={schema}
@@ -115,7 +118,7 @@ const CreateProfile = props => {
         }}
         render={props => (
           <Form>
-            <label className="text-green-600 italic text-sm">Handle</label>
+            <label className="text-green-600 italic text-sm">* Handle</label>
             <Field className="w-full border-b" type="text" name="handle" />
             <ErrorMessage name="handle">
               {mssg => (
@@ -123,7 +126,7 @@ const CreateProfile = props => {
               )}
             </ErrorMessage>
 
-            <label className="text-green-600 italic text-sm">Company</label>
+            <label className="text-green-600 italic text-sm">* Company</label>
             <Field className="w-full border-b" type="text" name="company" />
             <ErrorMessage name="company">
               {mssg => (
@@ -159,7 +162,7 @@ const CreateProfile = props => {
               )}
             </ErrorMessage>
 
-            <label className="text-green-600 italic text-sm">Status</label>
+            <label className="text-green-600 italic text-sm">* Status</label>
             <Field className="w-full border-b" component="select" name="status">
               <option value="developer">Developer</option>
               <option value="juniordeveloper">Junior Developer</option>
@@ -191,7 +194,7 @@ const CreateProfile = props => {
             </ErrorMessage>
 
             <label className="text-green-600 italic text-sm">
-              Skills (separated with comma)
+              Skills (eg. HTML,CSS,JavaScript,PHP)
             </label>
             <Field className="w-full border-b" type="text" name="skills" />
             <ErrorMessage name="skills">

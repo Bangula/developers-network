@@ -5,6 +5,7 @@ import { getProfileByUserId } from "../../services/endpoints/profiles";
 import Header from "./components/Header";
 import BioSkills from "./components/BioSkills";
 import ExpEdu from "./components/ExpEdu";
+import Github from "./components/Github";
 
 const FullProfile = props => {
   const [profileData, setProfileData] = useState({});
@@ -43,6 +44,9 @@ const FullProfile = props => {
       <Header profileData={profileData} />
       <BioSkills profileData={profileData} />
       <ExpEdu profileData={profileData} />
+      {profileData.githubusername ? (
+        <Github githubusername={profileData.githubusername} />
+      ) : null}
     </div>
   );
 };

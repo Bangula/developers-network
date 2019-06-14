@@ -24,7 +24,12 @@ const Experience = props => {
               ) : (
                 ""
               )}{" "}
-              to {item.to ? <Moment format="DD-MM-YYYY">{item.to}</Moment> : ""}
+              to{" "}
+              {item.current ? (
+                "Now"
+              ) : (
+                <Moment format="DD-MM-YYYY">{item.to}</Moment>
+              )}
             </td>
             <td className="text-center">
               <button

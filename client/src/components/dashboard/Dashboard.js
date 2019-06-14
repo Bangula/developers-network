@@ -18,6 +18,7 @@ const Dashboard = props => {
     const { data, error } = await currentUserProfile();
     if (data) {
       setUserProfile(data);
+      console.log("bane", data);
     } else if (error) {
       setResponseError(error.response.data);
     }

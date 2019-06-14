@@ -13,7 +13,7 @@ const SignedInLinks = props => {
         Developers
       </Link>
       <Link
-        to="/"
+        to="/posts"
         className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
       >
         Posts

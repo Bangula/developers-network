@@ -35,8 +35,8 @@ const Developers = props => {
         maxWidth: "960px"
       }}
     >
-      <h1 className="text-green-800 text-3xl font-medium my-2">Developers</h1>
-      <h2 className="font-semibold text-lg my-2 mb-8">
+      <h1 className="text-teal-500 text-5xl font-medium my-2">Developers</h1>
+      <h2 className="text-3xl my-2 mb-8 text-gray-500">
         Browse and connect with developers
       </h2>
       <div className="developersList mt-32" style={{ marginTop: "80px" }}>

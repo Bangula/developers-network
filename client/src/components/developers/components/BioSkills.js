@@ -4,9 +4,13 @@ const BioSkills = ({ profileData }) => {
   const skillList = profileData.user
     ? profileData.skills.map((item, index) => {
         return (
-          <span key={index} className="ml-4 font-light text-teal-600">
-            <i className="fas fa-check mr-1" />
-            {item.toUpperCase()}
+          <span key={index}>
+            {item !== " " ? (
+              <span className="ml-4 font-light text-teal-600">
+                <i className="fas fa-check mr-1" />
+                {item.toUpperCase()}
+              </span>
+            ) : null}
           </span>
         );
       })

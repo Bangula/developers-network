@@ -6,6 +6,7 @@ const Header = ({ profileData }) => {
     <a
       href={profileData.website}
       className="text-white text-3xl mx-2 hover:text-black"
+      target="_blank"
     >
       <i className="fas fa-globe" />
     </a>
@@ -15,6 +16,7 @@ const Header = ({ profileData }) => {
       <a
         href={profileData.social.twitter}
         className="text-white text-3xl mx-2 hover:text-black"
+        target="_blank"
       >
         <i className="fab fa-twitter" />
       </a>
@@ -23,6 +25,7 @@ const Header = ({ profileData }) => {
       <a
         href={profileData.social.facebook}
         className="text-white text-3xl mx-2 hover:text-black"
+        target="_blank"
       >
         <i className="fab fa-facebook-square" />
       </a>
@@ -31,6 +34,7 @@ const Header = ({ profileData }) => {
       <a
         href={profileData.social.linkedin}
         className="text-white text-3xl mx-2 hover:text-black"
+        target="_blank"
       >
         <i className="fab fa-linkedin" />
       </a>
@@ -39,6 +43,7 @@ const Header = ({ profileData }) => {
       <a
         href={profileData.social.youtube}
         className="text-white text-3xl mx-2 hover:text-black"
+        target="_blank"
       >
         <i className="fab fa-youtube" />
       </a>
@@ -47,6 +52,7 @@ const Header = ({ profileData }) => {
       <a
         href={profileData.social.instagram}
         className="text-white text-3xl mx-2 hover:text-black"
+        target="_blank"
       >
         <i className="fab fa-instagram" />
       </a>

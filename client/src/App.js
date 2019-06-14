@@ -19,6 +19,8 @@ import CreateProfile from "./components/dashboard/CreateProfile";
 import AddExperience from "./components/dashboard/AddExperience";
 import AddEducation from "./components/dashboard/AddEducation";
 import FullProfile from "./components/developers/FullProfile";
+import Posts from "./components/posts/Posts";
+import Post from "./components/posts/Post";
 
 if (localStorage.access_token_name) {
   //Decode token and get user info
@@ -44,6 +46,8 @@ function App() {
         </ProfilesProvider>
         <Route path="/developers" component={Developers} />
         <Route path="/fullprofile/:id" component={FullProfile} />
+        <Route path="/posts" component={Posts} />
+        <Route path="/post/:id" component={Post} />
       </div>
     </BrowserRouter>
   );

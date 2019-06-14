@@ -1,4 +1,8 @@
-import { signUp, signIn } from "../../services/endpoints/auth";
+import {
+  signUp,
+  signIn,
+  getProfileByUserId
+} from "../../services/endpoints/auth";
 import jwt_decode from "jwt-decode";
 
 export const registerUser = (user, history) => {
@@ -19,6 +23,7 @@ export const loginUser = (user, history) => {
     if (data) {
       let token = data.data.token;
       let decoded = jwt_decode(token);
+
       dispatch({
         type: "SET_USER",
         payload: {

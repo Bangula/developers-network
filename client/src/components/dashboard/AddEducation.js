@@ -6,6 +6,7 @@ import { addEducation } from "../../services/endpoints/profiles";
 
 const AddEducation = props => {
   const handleSubmit = async values => {
+    console.log(values);
     const { data, error } = await addEducation(values);
     if (data) {
       console.log(data);
@@ -26,7 +27,7 @@ const AddEducation = props => {
       .max(70, "Too Long!"),
     description: Yup.string()
       .min(5, "Too Short!")
-      .max(70, "Too Long!")
+      .max(300, "Too Long!")
   });
 
   const initialValues = {
