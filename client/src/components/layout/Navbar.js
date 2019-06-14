@@ -25,8 +25,8 @@ const Navbar = ({ isAuthenticated, ...props }) => {
           </svg>
         </button>
       </div>
-      <div className="w-full block flex-grow lg:flex lg:w-auto ">
-        <div className="text-sm lg:flex-grow flex justify-end ">
+      <div className="w-full block flex-grow lg:flex lg:w-auto">
+        <div className="text-sm lg:flex-grow flex justify-end">
           {isAuthenticated ? <SignedInLinks /> : <SignedOutLinks />}
         </div>
       </div>
