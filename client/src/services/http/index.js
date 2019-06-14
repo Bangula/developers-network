@@ -1,7 +1,9 @@
 import axios from "axios";
 import { authRequest, authResponse } from "./interceptors/authentication";
 
-const url = "http://localhost:5000";
+const production = "https://nameless-beach-56804.herokuapp.com";
+const development = "http://localhost:5000/";
+const url = process.env.NODE_ENV ? production : development;
 
 const http = axios.create({
   baseURL: url
