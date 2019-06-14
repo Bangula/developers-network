@@ -5,7 +5,7 @@ const SignedOutLinks = () => {
   return (
     <>
       <Link
-        to="/"
+        to="/developers"
         className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
       >
         Developers
