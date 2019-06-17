@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 input:focus {
   outline: none;
 }
@@ -40,4 +44,7 @@ th {
 
 tr:nth-child(even) {
   background-color: #e6fffa;
+}
+.App {
+  min-height: 100vh;
 }

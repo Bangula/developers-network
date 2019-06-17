@@ -48,18 +48,23 @@ const Experience = props => {
       <h1 className="text-green-800 text-2xl font-semibold my-8">
         Experience Credentials
       </h1>
-      <table>
-        <thead>
-          <tr>
-            <th className="text-green-700">Company</th>
-            <th className="text-green-700">Title</th>
-            <th className="text-green-700">Years</th>
-            <th />
-          </tr>
-        </thead>
 
-        <tbody>{experienceList}</tbody>
-      </table>
+      {experienceList && experienceList.length ? (
+        <table>
+          <thead>
+            <tr>
+              <th className="text-green-700">Company</th>
+              <th className="text-green-700">Title</th>
+              <th className="text-green-700">Years</th>
+              <th />
+            </tr>
+          </thead>
+
+          <tbody>{experienceList}</tbody>
+        </table>
+      ) : (
+        <span className="italic text-gray-600">No data</span>
+      )}
     </div>
   );
 };

@@ -16,20 +16,21 @@ const DevItem = ({ data }) => {
   });
   return (
     <div
-      className="developerInfo w-full rounded-sm bg-gray-100	flex justify-between flex-wrap p-8 mb-4 shadow-md hover:shadow-lg"
+      className="developerInfo w-full rounded-sm bg-gray-100	md:flex justify-between flex-wrap p-1 py-2 md:p-8 mb-4 shadow-md hover:shadow-lg"
       style={{ transition: "all 0.2s" }}
     >
       <div
-        className="w-1/4 border rounded-full overflow-hidden h-56  self-center"
+        className="w-full md:w-1/4  overflow-hidden h-56 text-center   self-center"
         style={{}}
       >
         <img
-          className="w-full h-full"
+          className="w-42 md:w-full h-full rounded-full"
           src={data.user ? data.user.avatar : null}
           alt="user avatar"
+          style={{ margin: "0 auto" }}
         />
       </div>
-      <div className="w-2/4 px-8 self-center">
+      <div className="text-center md:text-left md:w-2/4 px-8 self-center">
         <h1 className="text-2xl my-2">{data.user ? data.user.name : null}</h1>
         <p className="my-2 font-light">
           {data.status}
@@ -43,7 +44,7 @@ const DevItem = ({ data }) => {
           View Profile
         </Link>
       </div>
-      <div className="w-1/4 px-4 self-center">
+      <div className="text-center md:text-left mt-4 mt-0 md:w-1/4 px-4 self-center">
         <ul>{skills}</ul>
       </div>
     </div>

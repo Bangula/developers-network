@@ -6,13 +6,15 @@ import { Link } from "react-router-dom";
 const Home = props => {
   return (
     <div
-      className="home-page w-screen h-screen pt-56 bg-contain md:bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className="home-page w-screen h-screen pt-56  md:bg-cover bg-no-repeat"
+      style={{
+        backgroundImage: `url(${bgImage})`
+      }}
     >
-      <h2 className="text-white text-center text-6xl font-semibold">
+      <h2 className="text-white text-center text-3xl md:text-6xl font-semibold">
         Welcome to DevConnect
       </h2>
-      <h3 className="text-teal-800 text-center text-2xl">
+      <h3 className="text-teal-800 text-center text-xl md:text-2xl">
         Social Network For Web Developers
       </h3>
       <div className="mt-20 w-screen text-center">
@@ -23,7 +25,7 @@ const Home = props => {
           Sign Up
         </Link>
         <Link
-          className="home-btn bg-teal-500 p-4 py-2 text-white opacity-75 rounded-sm"
+          className="home-btn bg-gray-100 p-4 py-2 text-gray-700 opacity-75 rounded-sm"
           to="/login"
         >
           Login

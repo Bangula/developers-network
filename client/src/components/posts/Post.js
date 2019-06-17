@@ -63,23 +63,22 @@ const Post = ({ userId, ...props }) => {
   };
   return (
     <div
-      className=""
+      className="px-2"
       style={{
         margin: "0 auto",
-        marginTop: "8%",
         width: "100%",
         maxWidth: "960px"
       }}
     >
       <button
-        className="home-btn bg-gray-200 p-4 py-1 text-black rounded-sm my-2"
+        className="home-btn mt-32 bg-gray-200 p-4 py-1 text-black rounded-sm my-2"
         onClick={() => props.history.push("/posts")}
       >
         Back to posts
       </button>
 
-      <div className="border border-gray-200 shadow-lg my-4 flex p-4 content-center">
-        <div className="w-1/4 text-center ">
+      <div className="border border-gray-200 shadow-lg my-4 md:flex p-4 content-center">
+        <div className="md:w-1/4 text-center ">
           <img
             className="w-1/2 rounded-full"
             style={{
@@ -90,7 +89,7 @@ const Post = ({ userId, ...props }) => {
           />
           <p className="text-xl text-teal-500 my-2">{postData.name}</p>
         </div>
-        <div className="w-3/4  flex">
+        <div className="md:w-3/4  flex">
           <p className="text-gray-600 text-lg self-center">{postData.text}</p>
         </div>
       </div>

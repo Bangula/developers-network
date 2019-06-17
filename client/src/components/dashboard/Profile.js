@@ -28,9 +28,9 @@ const Profile = props => {
       <h2 className="font-semibold text-xl my-2 mb-8">
         Welcome {props.user.name}
       </h2>
-      <div className="dashLinks">
+      <div className="dashLinks flex flex-wrap">
         <Link
-          className="home-btn bg-teal-500 p-4 py-2 text-white opacity-75 rounded-sm mr-2"
+          className="home-btn bg-teal-500 p-4 py-2 text-white opacity-75 rounded-sm mr-2  mt-1"
           to={{
             pathname: "/createprofile",
             state: { edit: true, data: userProfile }
@@ -39,13 +39,13 @@ const Profile = props => {
           Edit Profile
         </Link>
         <Link
-          className="home-btn bg-teal-500 p-4 py-2 text-white opacity-75 rounded-sm mr-2"
+          className="home-btn bg-teal-500 p-4 py-2 text-white opacity-75 rounded-sm mr-2 mt-1"
           to="/addexperience"
         >
           Add Experience
         </Link>
         <Link
-          className="home-btn bg-teal-500 p-4 py-2 text-white opacity-75 rounded-sm mr-2"
+          className="home-btn bg-teal-500 p-4 py-2 text-white opacity-75 rounded-sm mr-2  mt-1"
           to="/addeducation"
         >
           Add Education

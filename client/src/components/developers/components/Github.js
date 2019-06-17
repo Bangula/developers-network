@@ -16,8 +16,8 @@ const Github = ({ githubusername }) => {
   const reposList = data.length
     ? data.map((item, index) => {
         return (
-          <div key={index} className="border shadow-md w-full p-4 flex my-3">
-            <div className="" style={{ width: "90%" }}>
+          <div key={index} className="border shadow-md w-full p-4 md:flex my-3">
+            <div className="md:w-10/12 ">
               <a
                 className="text-teal-500 text-lg hover:text-teal-800 my-2"
                 href={item.clone_url}
@@ -31,7 +31,7 @@ const Github = ({ githubusername }) => {
                   : "No description available"}
               </p>
             </div>
-            <div className="" style={{ width: "10%" }}>
+            <div className="w-4/12 md:w-2/12 ">
               <p className="bg-teal-600 text-white px-1 my-1">
                 Stars: {item.stargazers_count}{" "}
               </p>

@@ -14,7 +14,7 @@ const Navbar = ({ isAuthenticated, ...props }) => {
   };
   return (
     <div>
-      <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full top-0">
+      <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full top-0 z-50">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Link to="/" className="font-semibold text-xl tracking-tight">
             DevConnect

@@ -62,15 +62,14 @@ const Posts = props => {
 
   return (
     <div
-      className=""
+      className="px-2"
       style={{
         margin: "0 auto",
-        marginTop: "8%",
         width: "100%",
         maxWidth: "960px"
       }}
     >
-      <h1 className="text-teal-500 text-5xl font-medium my-2">Posts</h1>
+      <h1 className="text-teal-500 text-5xl font-medium my-2 mt-32">Posts</h1>
       <p className=" text-3xl my-2 mb-8 text-gray-500">
         Welcome to the community!
       </p>

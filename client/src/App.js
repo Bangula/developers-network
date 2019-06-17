@@ -21,6 +21,7 @@ import AddEducation from "./components/dashboard/AddEducation";
 import FullProfile from "./components/developers/FullProfile";
 import Posts from "./components/posts/Posts";
 import Post from "./components/posts/Post";
+import Footer from "./components/layout/Footer";
 
 if (localStorage.access_token_name) {
   //Decode token and get user info
@@ -33,7 +34,7 @@ if (localStorage.access_token_name) {
 function App() {
   return (
     <BrowserRouter>
-      <div className="App pb-32">
+      <div className="App pb-32 relative">
         <Navbar />
         <Route exact path="/" component={Home} />
         <Route path="/register" component={Register} />
@@ -48,6 +49,7 @@ function App() {
         <Route path="/fullprofile/:id" component={FullProfile} />
         <Route path="/posts" component={Posts} />
         <Route path="/post/:id" component={Post} />
+        <Footer />
       </div>
     </BrowserRouter>
   );

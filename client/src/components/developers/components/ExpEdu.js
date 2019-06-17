@@ -64,12 +64,12 @@ const ExpEdu = ({ profileData }) => {
   }
 
   return (
-    <div className="expEdu lg:flex border my-3 flex-wrap justify-between">
-      <div className="experience border p-8" style={{ width: "49.5%" }}>
+    <div className="expEdu md:flex my-3 flex-wrap justify-between">
+      <div className=" md:w-6/12 experience border p-8">
         <p className="text-3xl text-teal-500 mb-4 ">Experience</p>
         {experienceList}
       </div>
-      <div className="education border p-8" style={{ width: "49.5%" }}>
+      <div className=" md:w-6/12 education border p-8">
         <p className="text-3xl text-teal-500 mb-4 ">Education</p>
         {educationList}
       </div>

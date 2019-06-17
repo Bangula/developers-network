@@ -28,14 +28,16 @@ const Developers = props => {
     : null;
   return (
     <div
+      className=" px-4"
       style={{
-        margin: "0 auto",
         marginTop: "8%",
         width: "100%",
         maxWidth: "960px"
       }}
     >
-      <h1 className="text-teal-500 text-5xl font-medium my-2">Developers</h1>
+      <h1 className="text-teal-500 mt-32 text-5xl font-medium my-2">
+        Developers
+      </h1>
       <h2 className="text-3xl my-2 mb-8 text-gray-500">
         Browse and connect with developers
       </h2>

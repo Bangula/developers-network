@@ -99,7 +99,7 @@ const CreateProfile = props => {
   return (
     <div
       style={{ marginTop: "150px" }}
-      className="createProfile container border p-16 mt-32 shadow-lg"
+      className="createProfile container border p-2 md:p-16 mt-32 shadow-lg"
     >
       <h1 className="text-green-800 text-2xl font-semibold my-2">
         {props.location.state ? "Edit" : "Create"} Your Profile

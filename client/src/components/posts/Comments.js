@@ -8,9 +8,9 @@ const Comments = ({ getData, comments, userId, deleteComment }) => {
           return (
             <div
               key={item._id}
-              className="border-b border-gray-400 my-4 flex p-4 shadow content-center"
+              className="border-b border-gray-400 my-4 md:flex p-4 shadow content-center"
             >
-              <div className="w-1/4 text-center">
+              <div className="md:w-1/4 text-center">
                 <img
                   className="w-1/2 rounded-full"
                   style={{
@@ -21,9 +21,9 @@ const Comments = ({ getData, comments, userId, deleteComment }) => {
                 />
                 <p className="text-xl text-teal-500 my-2">{item.name}</p>
               </div>
-              <div className="w-3/4 relative">
+              <div className="md:w-3/4 relative">
                 <p className="text-gray-600 text-lg">{item.text}</p>
-                <div className="absolute bottom-0">
+                <div className="md:absolute bottom-0">
                   <p className="text-gray-600 text-sm my-2">
                     Posted on <Moment format="MM/DD/YYYY">{item.date}</Moment>
                     {userId === item.user ? (

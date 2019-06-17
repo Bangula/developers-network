@@ -24,7 +24,7 @@ const Dashboard = props => {
     }
   }
   return (
-    <div>
+    <div className="px-2">
       {responseError ? (
         <NoProfile user={props.user} />
       ) : (

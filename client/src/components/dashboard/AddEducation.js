@@ -46,7 +46,7 @@ const AddEducation = props => {
   return (
     <div
       style={{ marginTop: "150px" }}
-      className="createProfile container border p-16 mt-32 shadow-lg"
+      className="createProfile container border p-16 mt-32 shadow-lg px-2"
     >
       <h1 className="text-green-800 text-4xl font-semibold my-2">
         Add Your Education

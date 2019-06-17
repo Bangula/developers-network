@@ -52,9 +52,9 @@ const PostItem = ({ allPosts, getPosts, userId }) => {
           return (
             <div
               key={item._id}
-              className="border border-gray-400 my-4 flex p-8 content-center"
+              className="border border-gray-400 my-4 md:flex p-8 content-center"
             >
-              <div className="w-1/4 text-center ">
+              <div className="md:w-1/4 text-center ">
                 <img
                   className="w-1/2 rounded-full"
                   style={{
@@ -65,11 +65,11 @@ const PostItem = ({ allPosts, getPosts, userId }) => {
                 />
                 <p className="text-xl text-teal-500 my-2">{item.name}</p>
               </div>
-              <div className="w-3/4 relative">
+              <div className="md:w-3/4 relative">
                 <div className="" style={{ marginBottom: "10px" }}>
                   <p className="text-gray-600 text-lg ">{item.text}</p>
                 </div>
-                <div className="absolute bottom-0">
+                <div className="md:absolute bottom-0">
                   <p className="text-gray-600 text-sm my-2">
                     Posted on <Moment format="MM/DD/YYYY">{item.date}</Moment>
                   </p>

@@ -50,18 +50,22 @@ const Education = props => {
       <h1 className="text-green-800 text-2xl font-semibold my-8">
         Education Credentials
       </h1>
-      <table>
-        <thead>
-          <tr>
-            <th className="text-green-700">School</th>
-            <th className="text-green-700">Degree</th>
-            <th className="text-green-700">Years</th>
-            <th />
-          </tr>
-        </thead>
+      {educationList && educationList.length ? (
+        <table>
+          <thead>
+            <tr>
+              <th className="text-green-700">School</th>
+              <th className="text-green-700">Degree</th>
+              <th className="text-green-700">Years</th>
+              <th />
+            </tr>
+          </thead>
 
-        <tbody>{educationList}</tbody>
-      </table>
+          <tbody>{educationList}</tbody>
+        </table>
+      ) : (
+        <span className="italic text-gray-600">No data</span>
+      )}
     </div>
   );
 };
