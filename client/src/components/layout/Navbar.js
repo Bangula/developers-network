@@ -8,6 +8,10 @@ import SignedOutLinks from "./SignedOutLinks";
 import MobileNav from "./mobileNav/MobileNav";
 
 const Navbar = ({ isAuthenticated, ...props }) => {
+  const [toggleMobileMenu, setToggleMobileMenu] = React.useState(false);
+  const setToggle = () => {
+    setToggleMobileMenu(!toggleMobileMenu);
+  };
   return (
     <div>
       <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full top-0">
@@ -17,7 +21,10 @@ const Navbar = ({ isAuthenticated, ...props }) => {
           </Link>
         </div>
         <div className="block lg:hidden">
-          <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+          <button
+            onClick={setToggle}
+            className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+          >
             <svg
               className="fill-current h-3 w-3"
               viewBox="0 0 20 20"
@@ -34,7 +41,11 @@ const Navbar = ({ isAuthenticated, ...props }) => {
           </div>
         </div>
       </nav>
-      <MobileNav isAuthenticated={isAuthenticated} />
+      <MobileNav
+        isAuthenticated={isAuthenticated}
+        menuIsActive={toggleMobileMenu}
+        setToggle={setToggle}
+      />
     </div>
   );
 };

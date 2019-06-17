@@ -1,12 +1,12 @@
 import React from "react";
-import bgImage from "../../assets/office-background1.jpg";
+import bgImage from "../../assets/office-background1.png";
 
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div
-      className="home-page w-screen h-screen pt-56 bg-contain bg-no-repeat"
+      className="home-page w-screen h-screen pt-56 bg-contain md:bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <h2 className="text-white text-center text-6xl font-semibold">
