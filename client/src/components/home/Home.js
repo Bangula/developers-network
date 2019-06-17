@@ -3,7 +3,7 @@ import bgImage from "../../assets/office-background1.png";
 
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = props => {
   return (
     <div
       className="home-page w-screen h-screen pt-56 bg-contain md:bg-cover bg-no-repeat"
