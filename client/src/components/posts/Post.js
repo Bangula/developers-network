@@ -20,7 +20,7 @@ const Post = ({ userId, ...props }) => {
 
   React.useEffect(() => {
     getData(props.match.params.id);
-  }, []);
+  }, [props.match.params.id]);
 
   const handleSubmit = async e => {
     e.preventDefault();

@@ -12,7 +12,7 @@ const Github = ({ githubusername }) => {
         setData(res.data);
       })
       .catch(console.log);
-  }, []);
+  }, [githubusername]);
   const reposList = data.length
     ? data.map((item, index) => {
         return (
@@ -22,6 +22,7 @@ const Github = ({ githubusername }) => {
                 className="text-teal-500 text-lg hover:text-teal-800 my-2"
                 href={item.clone_url}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {item.name}
               </a>
