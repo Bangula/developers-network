@@ -29,7 +29,7 @@ const Comments = ({ getData, comments, userId, deleteComment }) => {
                     {userId === item.user ? (
                       <button
                         onClick={() => deleteComment(item._id)}
-                        className="home-btn bg-red-700 px-6 py-1 text-white opacity-75 rounded-sm font-semibold ml-4"
+                        className="home-btn bg-red-700 px-6 py-1 text-white opacity-75 rounded-sm font-semibold ml-4 mb-1"
                       >
                         x
                       </button>

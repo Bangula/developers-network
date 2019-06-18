@@ -76,19 +76,19 @@ const PostItem = ({ allPosts, getPosts, userId }) => {
                   <div>
                     <button
                       onClick={() => handleLike(item._id)}
-                      className="home-btn bg-gray-300 px-6 py-1 text-black opacity-75 rounded-sm mr-2"
+                      className="home-btn bg-gray-300 px-6 py-1 text-black opacity-75 rounded-sm mr-2 mb-1"
                     >
                       <i className="fas fa-thumbs-up" />
                       <span className="px-1 font-semibold">{likes}</span>
                     </button>
                     <button
                       onClick={() => handleUnlike(item._id)}
-                      className="home-btn bg-gray-300 px-6 py-1 text-black opacity-75 rounded-sm mr-2"
+                      className="home-btn bg-gray-300 px-6 py-1 text-black opacity-75 rounded-sm mr-2 mb-1"
                     >
                       <i className="fas fa-thumbs-down" />
                     </button>
                     <Link
-                      className="home-btn bg-teal-700 px-6 py-1 text-white opacity-75 rounded-sm mr-2  font-semibold"
+                      className="home-btn bg-teal-700 px-6 py-1 text-white opacity-75 rounded-sm mr-2  font-semibold mb-1"
                       to={`/post/${item._id}`}
                     >
                       Discussions
@@ -101,7 +101,7 @@ const PostItem = ({ allPosts, getPosts, userId }) => {
                     {userId === item.user ? (
                       <button
                         onClick={() => handleDelete(item._id)}
-                        className="home-btn bg-red-700 px-6 py-1 text-white opacity-75 rounded-sm font-semibold"
+                        className="home-btn bg-red-700 px-6 py-1 text-white opacity-75 rounded-sm font-semibold mb-1"
                       >
                         x
                       </button>
