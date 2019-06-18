@@ -28,7 +28,7 @@ const Developers = props => {
     : null;
   return (
     <div
-      className=" px-4"
+      className=" px-4 container"
       style={{
         marginTop: "8%",
         width: "100%",

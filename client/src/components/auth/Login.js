@@ -20,7 +20,7 @@ const Login = props => {
   };
   return (
     <div
-      className="register fixed w-11/12 w-2/4 border p-8 shadow-xl border-gray-100"
+      className="register fixed w-11/12 md:w-2/4 border p-8 shadow-xl border-gray-100"
       style={{
         top: "50%",
         transform: "translateY(-50%)",

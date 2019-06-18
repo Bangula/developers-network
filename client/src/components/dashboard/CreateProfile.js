@@ -1,23 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { connect } from "react-redux";
 
 import { createProfile } from "../../services/endpoints/profiles";
-import { ProfilesContext } from "../../context/ProfilesProvider";
 
 const CreateProfile = props => {
   const [createProfileError, setCreateProfileError] = React.useState("");
-  const { state, dispatch } = useContext(ProfilesContext);
 
   const handleSubmit = async values => {
     values.id = props.userId;
     const { data, error } = await createProfile(values);
     if (data) {
-      dispatch({
-        type: "SET_PROFILE",
-        payload: data.data
-      });
       if (props.location.state) {
         props.history.goBack();
       } else {
